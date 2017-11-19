@@ -1,15 +1,15 @@
  <template lang="pug">
   .root
-    top
-    description
-    app
+    top(v-if='isShow == "top"')
+    description(v-if='isShow == "description"')
+    app(v-if='isShow == "app"')
 </template>
 
 <script>
   import top from './top/top.vue'
   import description from './description/description.vue'
   import app from './app/app.vue'
-  import { mapGetters, mapActions } from 'vuex';
+  import { mapGetters, mapMutations, mapState } from 'vuex';
 
   export default {
     name: 'root',
@@ -18,11 +18,20 @@
       description,
       app
     },
+    mounted(){
+      // setTimeout(()=>{
+      //   this.showDescription();
+      // },5000)
+    },
     computed: {
-      ...mapGetters([ 'sampleMessage' ])
+      ...mapState([
+        'isShow'
+      ])
     },
     methods: {
-      ...mapActions([ 'changeSampleName' ])
+      ...mapMutations([
+        'showDescription'
+      ])
     }
   }
 </script>
