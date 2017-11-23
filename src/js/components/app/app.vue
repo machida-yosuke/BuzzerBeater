@@ -1,5 +1,5 @@
 <template lang="pug">
-  .app-wrap(v-bind:style='[backgroundColor, {background}]')
+  .app-wrap(v-bind:style='[backgroundColor, {background}]' v-on:click='enableMicroPhone')
     .app-wrap__megaphone
       <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 779.6 1380" style="enable-background:new 0 0 779.6 1380;" xml:space="preserve">
       <g v-bind:data-color='megaphoneColor'>
@@ -17,7 +17,6 @@ export default {
   name: 'app',
   mounted(){
     accelerationManager.setAcceleration();
-    console.log(accelerationManager);
     accelerationManager.on('Shake0',()=>{
       this.changeColor0();
     });
@@ -33,7 +32,6 @@ export default {
     accelerationManager.on('Shake4',()=>{
       this.changeColor4();
     });
-    microphone.initAudioContext();
     microphone.on('support0',()=>{
       this.changeColor0();
     })
@@ -67,9 +65,13 @@ export default {
       'changeColor2',
       'changeColor3',
       'changeColor4',
-      ])
+    ]),
+    enableMicroPhone(){
+      console.log('on');
+      microphone.initAudioContext();
     }
   }
+}
 </script>
 
 <style lang="scss">
