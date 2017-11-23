@@ -3,8 +3,9 @@ import EventEmitter from 'events'
 class AccelerationManager extends EventEmitter {
   constructor() {
     super();
+    this.enableAcceleration = true;
+    this.Timer = null;
   }
-
   setAcceleration(){
     this.initHandle();
   }
@@ -14,20 +15,22 @@ class AccelerationManager extends EventEmitter {
     const y = event.acceleration.y;
     const z = event.acceleration.z;
 
-    if (x < 5 || y <5 || z <5) {
-      this.emit('Shake0');
+    if (this.enableAcceleration == false) {
+      if (this.Timer !== null) {
+        return;
+      }
+      this.Timer = setTimeout(()=>{
+        this.enableAcceleration = true;
+        this.Timer = null;
+      },2000)
+      return ;
     }
-    if (x > 5 || y >5 || z >5) {
+
+    if (x > 20 || y > 20 || z > 20 || x < -20 || y < -20 || z < -20) {
       this.emit('Shake1');
-    }
-    if (x > 10 || y >10 || z >10) {
-      this.emit('Shake2');
-    }
-    if (x > 15 || y >15 || z >15) {
-      this.emit('Shake3');
-    }
-    if (x > 20 || y >20 || z >20) {
-      this.emit('Shake4');
+      this.enableAcceleration = false;
+    }else {
+      this.emit('Shake0');
     }
   }
 

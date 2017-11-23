@@ -1,5 +1,5 @@
 <template lang="pug">
-  .app-wrap(v-bind:style='[backgroundColor, {background}]' v-on:click='enableMicroPhone')
+  .app-wrap(v-bind:style='[backgroundColor, {background}]')
     .app-wrap__megaphone
       <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 779.6 1380" style="enable-background:new 0 0 779.6 1380;" xml:space="preserve">
       <g v-bind:data-color='megaphoneColor'>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations, mapState } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 import { accelerationManager } from '../../module/accelerationManager';
 import { microphone } from '../../module/UserMediaManager';
 export default {
@@ -23,29 +23,12 @@ export default {
     accelerationManager.on('Shake1',()=>{
       this.changeColor1();
     });
-    accelerationManager.on('Shake2',()=>{
-      this.changeColor2();
-    });
-    accelerationManager.on('Shake3',()=>{
-      this.changeColor3();
-    });
-    accelerationManager.on('Shake4',()=>{
-      this.changeColor4();
-    });
+
     microphone.on('support0',()=>{
       this.changeColor0();
     })
     microphone.on('support1',()=>{
       this.changeColor1();
-    })
-    microphone.on('support2',()=>{
-      this.changeColor2();
-    })
-    microphone.on('support3',()=>{
-      this.changeColor3();
-    })
-    microphone.on('support4',()=>{
-      this.changeColor4();
     })
   },
   data(){
@@ -62,14 +45,7 @@ export default {
     ...mapMutations([
       'changeColor0',
       'changeColor1',
-      'changeColor2',
-      'changeColor3',
-      'changeColor4',
-    ]),
-    enableMicroPhone(){
-      console.log('on');
-      microphone.initAudioContext();
-    }
+    ])
   }
 }
 </script>
@@ -93,16 +69,8 @@ export default {
   [data-color='0']{
     fill:#ff0000;
   }
+
   [data-color='1']{
-    fill:#ffff00;
-  }
-  [data-color='2']{
-    fill:#00ff00;
-  }
-  [data-color='3']{
-    fill:#00ffff;
-  }
-  [data-color='4']{
     fill:#0000ff;
   }
 </style>

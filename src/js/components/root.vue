@@ -9,8 +9,7 @@
   import top from './top/top.vue'
   import description from './description/description.vue'
   import app from './app/app.vue'
-  import { mapGetters, mapMutations, mapState } from 'vuex';
-
+  import { mapMutations, mapState } from 'vuex';
   export default {
     name: 'root',
     components:{
@@ -19,9 +18,9 @@
       app
     },
     mounted(){
-      // setTimeout(()=>{
-      //   this.showDescription();
-      // },5000)
+      setTimeout(()=>{
+        this.showDescription();
+      },2000)
     },
     computed: {
       ...mapState([
@@ -30,7 +29,8 @@
     },
     methods: {
       ...mapMutations([
-        'showDescription'
+        'showDescription',
+        'showApp'
       ])
     }
   }

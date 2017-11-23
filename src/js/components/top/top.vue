@@ -6,19 +6,13 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapMutations } from 'vuex';
 export default {
   name: 'top',
   data(){
     return{
       background:'#000'
     }
-  },
-  computed: {
-
-  },
-  methods: {
-
   }
 }
 </script>

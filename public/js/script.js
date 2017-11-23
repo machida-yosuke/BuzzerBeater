@@ -10213,7 +10213,7 @@ module.exports = index;
 
 }).call(this,require('_process'))
 },{"_process":93}],98:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 78, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 83, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 93, stdin */\n[data-color='0'] {\n  fill: #ff0000; }\n\n/* line 96, stdin */\n[data-color='1'] {\n  fill: #ffff00; }\n\n/* line 99, stdin */\n[data-color='2'] {\n  fill: #00ff00; }\n\n/* line 102, stdin */\n[data-color='3'] {\n  fill: #00ffff; }\n\n/* line 105, stdin */\n[data-color='4'] {\n  fill: #0000ff; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 54, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 59, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 69, stdin */\n[data-color='0'] {\n  fill: #ff0000; }\n\n/* line 73, stdin */\n[data-color='1'] {\n  fill: #0000ff; }")
 ;(function(){
 'use strict';
 
@@ -10245,29 +10245,12 @@ exports.default = {
     _accelerationManager.accelerationManager.on('Shake1', function () {
       _this.changeColor1();
     });
-    _accelerationManager.accelerationManager.on('Shake2', function () {
-      _this.changeColor2();
-    });
-    _accelerationManager.accelerationManager.on('Shake3', function () {
-      _this.changeColor3();
-    });
-    _accelerationManager.accelerationManager.on('Shake4', function () {
-      _this.changeColor4();
-    });
+
     _UserMediaManager.microphone.on('support0', function () {
       _this.changeColor0();
     });
     _UserMediaManager.microphone.on('support1', function () {
       _this.changeColor1();
-    });
-    _UserMediaManager.microphone.on('support2', function () {
-      _this.changeColor2();
-    });
-    _UserMediaManager.microphone.on('support3', function () {
-      _this.changeColor3();
-    });
-    _UserMediaManager.microphone.on('support4', function () {
-      _this.changeColor4();
     });
   },
   data: function data() {
@@ -10277,18 +10260,13 @@ exports.default = {
   },
 
   computed: (0, _extends3.default)({}, (0, _vuex.mapState)(['megaphoneColor'])),
-  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['changeColor0', 'changeColor1', 'changeColor2', 'changeColor3', 'changeColor4']), {
-    enableMicroPhone: function enableMicroPhone() {
-      console.log('on');
-      _UserMediaManager.microphone.initAudioContext();
-    }
-  })
+  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['changeColor0', 'changeColor1']))
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-wrap",style:([_vm.backgroundColor, {background: _vm.background}]),on:{"click":_vm.enableMicroPhone}},[_c('div',{staticClass:"app-wrap__megaphone"},[_c('svg',{staticStyle:{"enable-background":"new 0 0 779.6 1380"},attrs:{"version":"1.1","id":"レイヤー_1","xmlns":"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink","x":"0px","y":"0px","viewBox":"0 0 779.6 1380","xml:space":"preserve"}},[_c('g',{attrs:{"data-color":_vm.megaphoneColor}},[_c('path',{staticClass:"st0",attrs:{"d":"M539.2,1181.2c-9.7-27.1-19.4-54.1-29.1-81.1L779.6,198c-0.9,3.1-2,6.1-3.2,9.2c-0.6,1.4-1.2,2.8-1.8,4.2c-0.1,0.1-0.1,0.2-0.2,0.4c-0.6,1.4-1.2,2.7-1.9,4c-0.1,0.2-0.2,0.3-0.2,0.5c-0.7,1.3-1.4,2.7-2.1,4c-0.1,0.1-0.1,0.3-0.2,0.4c-0.7,1.4-1.5,2.7-2.3,4c0,0.1-0.1,0.1-0.1,0.2c-24.2,40.1-73.4,73.7-137.5,97.4c-31.8,11.8-67.2,21.2-105,27.7c-0.7,0.1-1.5,0.3-2.2,0.4c-2.4,0.4-4.8,0.8-7.1,1.2c-1.6,0.2-3.1,0.5-4.7,0.7c-1.5,0.2-3,0.4-4.4,0.7c-2.6,0.4-5.2,0.7-7.8,1.1c-0.1,0-0.2,0-0.3,0c-19.8,2.6-40.1,4.5-60.8,5.6c-0.1,0-0.1,0-0.2,0c-2.8,0.1-5.6,0.3-8.4,0.4c-0.8,0-1.6,0.1-2.4,0.1c-2.1,0.1-4.3,0.2-6.4,0.2c-1.4,0-2.8,0.1-4.2,0.1c-1.6,0-3.2,0.1-4.9,0.1c-1.8,0-3.7,0.1-5.5,0.1c-1.2,0-2.5,0-3.7,0c-2.2,0-4.3,0-6.5,0c-1,0-2,0-3,0c-2.4,0-4.8,0-7.2-0.1c-0.8,0-1.6,0-2.4,0c-2.6,0-5.1-0.1-7.7-0.2c-0.7,0-1.3,0-2-0.1c-2.7-0.1-5.3-0.2-8-0.3c-0.6,0-1.2,0-1.8-0.1c-2.7-0.1-5.5-0.2-8.3-0.4c-0.5,0-1-0.1-1.6-0.1c-2.8-0.2-5.7-0.3-8.5-0.5c-0.4,0-0.9-0.1-1.3-0.1c-2.9-0.2-5.8-0.4-8.8-0.6c-0.3,0-0.7-0.1-1-0.1c-3-0.2-6.1-0.5-9.1-0.8c-0.2,0-0.4,0-0.6-0.1c-3.2-0.3-6.5-0.6-9.7-0.9C145.4,339.2,22.9,271.1,0,191.6c87.1,302.2,174.3,604.3,261.4,906.5l-62.7,169.4c-20.1,50.4,47,99.9,149.8,110.5l0,0c1.7,0.2,3.3,0.3,5,0.5c0.6,0.1,1.1,0.1,1.7,0.1c1.1,0.1,2.1,0.2,3.2,0.3c0.9,0.1,1.9,0.1,2.8,0.2c0.7,0,1.4,0.1,2.1,0.1c1.1,0.1,2.2,0.1,3.3,0.2c0.5,0,1,0.1,1.6,0.1c1.2,0.1,2.4,0.1,3.6,0.2c0.4,0,0.8,0,1.2,0.1c1.3,0.1,2.6,0.1,3.9,0.1c0.3,0,0.6,0,0.9,0c1.4,0,2.8,0.1,4.1,0.1c0.2,0,0.4,0,0.6,0c1.5,0,3,0,4.4,0c0,0,0.1,0,0.1,0c14.2,0,28.1-0.7,41.5-2.1c41.6-4.5,78.7-15.9,105.2-32.1c2.9-1.8,5.7-3.6,8.3-5.5c0.2-0.1,0.4-0.3,0.6-0.4c0.7-0.5,1.3-1,2-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-0.9,1.8-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-1,1.8-1.5c0.2-0.1,0.3-0.3,0.5-0.4c1.2-1,2.3-2.1,3.5-3.1c0.2-0.2,0.4-0.4,0.6-0.6c0.5-0.4,0.9-0.9,1.3-1.3c0.3-0.3,0.6-0.6,0.9-0.9c0.4-0.4,0.8-0.8,1.2-1.3c0.3-0.4,0.7-0.7,1-1.1c0.4-0.4,0.7-0.8,1.1-1.2c0.3-0.4,0.7-0.8,1-1.2c0.3-0.4,0.6-0.8,1-1.2c0.4-0.5,0.8-1,1.2-1.6c0.3-0.4,0.7-0.9,1-1.3c0.4-0.6,0.9-1.2,1.3-1.8c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,1-1.5c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,0.9-1.5c0.2-0.3,0.4-0.7,0.5-1c0.3-0.6,0.6-1.1,0.8-1.7c0.1-0.3,0.3-0.6,0.4-0.9c0.4-0.9,0.8-1.7,1.1-2.6c4.6-11.6,4.6-23.1,0.7-34.1C560.9,1241.7,550,1211.4,539.2,1181.2z"}}),_vm._v(" "),_c('path',{staticClass:"st0",attrs:{"d":"M23,164.7c0-8.6,1.8-17.4,5.3-26.3C61.5,55.3,243.6-18.4,462.1,4.1c184.6,19.1,294.8,99.3,294.8,165.7c0,8.6-1.8,17.4-5.3,26.3c-33.1,83.1-215.3,156.8-433.7,134.3C133.3,311.3,23,231.1,23,164.7L23,164.7z"}})])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-wrap",style:([_vm.backgroundColor, {background: _vm.background}])},[_c('div',{staticClass:"app-wrap__megaphone"},[_c('svg',{staticStyle:{"enable-background":"new 0 0 779.6 1380"},attrs:{"version":"1.1","id":"レイヤー_1","xmlns":"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink","x":"0px","y":"0px","viewBox":"0 0 779.6 1380","xml:space":"preserve"}},[_c('g',{attrs:{"data-color":_vm.megaphoneColor}},[_c('path',{staticClass:"st0",attrs:{"d":"M539.2,1181.2c-9.7-27.1-19.4-54.1-29.1-81.1L779.6,198c-0.9,3.1-2,6.1-3.2,9.2c-0.6,1.4-1.2,2.8-1.8,4.2c-0.1,0.1-0.1,0.2-0.2,0.4c-0.6,1.4-1.2,2.7-1.9,4c-0.1,0.2-0.2,0.3-0.2,0.5c-0.7,1.3-1.4,2.7-2.1,4c-0.1,0.1-0.1,0.3-0.2,0.4c-0.7,1.4-1.5,2.7-2.3,4c0,0.1-0.1,0.1-0.1,0.2c-24.2,40.1-73.4,73.7-137.5,97.4c-31.8,11.8-67.2,21.2-105,27.7c-0.7,0.1-1.5,0.3-2.2,0.4c-2.4,0.4-4.8,0.8-7.1,1.2c-1.6,0.2-3.1,0.5-4.7,0.7c-1.5,0.2-3,0.4-4.4,0.7c-2.6,0.4-5.2,0.7-7.8,1.1c-0.1,0-0.2,0-0.3,0c-19.8,2.6-40.1,4.5-60.8,5.6c-0.1,0-0.1,0-0.2,0c-2.8,0.1-5.6,0.3-8.4,0.4c-0.8,0-1.6,0.1-2.4,0.1c-2.1,0.1-4.3,0.2-6.4,0.2c-1.4,0-2.8,0.1-4.2,0.1c-1.6,0-3.2,0.1-4.9,0.1c-1.8,0-3.7,0.1-5.5,0.1c-1.2,0-2.5,0-3.7,0c-2.2,0-4.3,0-6.5,0c-1,0-2,0-3,0c-2.4,0-4.8,0-7.2-0.1c-0.8,0-1.6,0-2.4,0c-2.6,0-5.1-0.1-7.7-0.2c-0.7,0-1.3,0-2-0.1c-2.7-0.1-5.3-0.2-8-0.3c-0.6,0-1.2,0-1.8-0.1c-2.7-0.1-5.5-0.2-8.3-0.4c-0.5,0-1-0.1-1.6-0.1c-2.8-0.2-5.7-0.3-8.5-0.5c-0.4,0-0.9-0.1-1.3-0.1c-2.9-0.2-5.8-0.4-8.8-0.6c-0.3,0-0.7-0.1-1-0.1c-3-0.2-6.1-0.5-9.1-0.8c-0.2,0-0.4,0-0.6-0.1c-3.2-0.3-6.5-0.6-9.7-0.9C145.4,339.2,22.9,271.1,0,191.6c87.1,302.2,174.3,604.3,261.4,906.5l-62.7,169.4c-20.1,50.4,47,99.9,149.8,110.5l0,0c1.7,0.2,3.3,0.3,5,0.5c0.6,0.1,1.1,0.1,1.7,0.1c1.1,0.1,2.1,0.2,3.2,0.3c0.9,0.1,1.9,0.1,2.8,0.2c0.7,0,1.4,0.1,2.1,0.1c1.1,0.1,2.2,0.1,3.3,0.2c0.5,0,1,0.1,1.6,0.1c1.2,0.1,2.4,0.1,3.6,0.2c0.4,0,0.8,0,1.2,0.1c1.3,0.1,2.6,0.1,3.9,0.1c0.3,0,0.6,0,0.9,0c1.4,0,2.8,0.1,4.1,0.1c0.2,0,0.4,0,0.6,0c1.5,0,3,0,4.4,0c0,0,0.1,0,0.1,0c14.2,0,28.1-0.7,41.5-2.1c41.6-4.5,78.7-15.9,105.2-32.1c2.9-1.8,5.7-3.6,8.3-5.5c0.2-0.1,0.4-0.3,0.6-0.4c0.7-0.5,1.3-1,2-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-0.9,1.8-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-1,1.8-1.5c0.2-0.1,0.3-0.3,0.5-0.4c1.2-1,2.3-2.1,3.5-3.1c0.2-0.2,0.4-0.4,0.6-0.6c0.5-0.4,0.9-0.9,1.3-1.3c0.3-0.3,0.6-0.6,0.9-0.9c0.4-0.4,0.8-0.8,1.2-1.3c0.3-0.4,0.7-0.7,1-1.1c0.4-0.4,0.7-0.8,1.1-1.2c0.3-0.4,0.7-0.8,1-1.2c0.3-0.4,0.6-0.8,1-1.2c0.4-0.5,0.8-1,1.2-1.6c0.3-0.4,0.7-0.9,1-1.3c0.4-0.6,0.9-1.2,1.3-1.8c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,1-1.5c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,0.9-1.5c0.2-0.3,0.4-0.7,0.5-1c0.3-0.6,0.6-1.1,0.8-1.7c0.1-0.3,0.3-0.6,0.4-0.9c0.4-0.9,0.8-1.7,1.1-2.6c4.6-11.6,4.6-23.1,0.7-34.1C560.9,1241.7,550,1211.4,539.2,1181.2z"}}),_vm._v(" "),_c('path',{staticClass:"st0",attrs:{"d":"M23,164.7c0-8.6,1.8-17.4,5.3-26.3C61.5,55.3,243.6-18.4,462.1,4.1c184.6,19.1,294.8,99.3,294.8,165.7c0,8.6-1.8,17.4-5.3,26.3c-33.1,83.1-215.3,156.8-433.7,134.3C133.3,311.3,23,231.1,23,164.7L23,164.7z"}})])])])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10298,11 +10276,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-62b0995e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-62b0995e", __vue__options__)
+    hotAPI.rerender("data-v-62b0995e", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"../../module/accelerationManager":103,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 27, stdin */\n.description-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 31, stdin */\n  .description-wrap__logo {\n    top: 5.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 38.51852%;\n    height: 11.97917%;\n    background: url(\"../img/description/description_logo.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 42, stdin */\n  .description-wrap__description {\n    top: 24.01042%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 82.03704%;\n    height: 26.14583%;\n    background: url(\"../img/description/description.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 53, stdin */\n  .description-wrap__icon {\n    top: 55.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.98148%;\n    height: 35.26042%;\n    background: url(\"../img/description/icon.svg\") no-repeat center;\n    background-size: contain; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 31, stdin */\n.description-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 35, stdin */\n  .description-wrap__logo {\n    top: 5.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 38.51852%;\n    height: 11.97917%;\n    background: url(\"../img/description/description_logo.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 46, stdin */\n  .description-wrap__description {\n    top: 24.01042%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 82.03704%;\n    height: 26.14583%;\n    background: url(\"../img/description/description.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 57, stdin */\n  .description-wrap__icon {\n    top: 55.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.98148%;\n    height: 35.26042%;\n    background: url(\"../img/description/icon.svg\") no-repeat center;\n    background-size: contain; }")
 ;(function(){
 'use strict';
 
@@ -10310,7 +10288,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var _vuex = require('vuex');
+
+var _UserMediaManager = require('../../module/UserMediaManager');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   name: 'description',
@@ -10320,14 +10306,18 @@ exports.default = {
     };
   },
 
-  computed: {},
-  methods: {}
+  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['showApp']), {
+    startMicrophone: function startMicrophone() {
+      this.showApp();
+      _UserMediaManager.microphone.initAudioContext();
+    }
+  })
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"description-wrap",style:([_vm.backgroundColor, {background: _vm.background}])},[_c('h2',{staticClass:"description-wrap__logo"},[_vm._v("BUZZER BEATER")]),_c('div',{staticClass:"description-wrap__description"},[_vm._v("ブザーがなったらインタラクションスタート!スマホを横に降ってブザービターが決まるようにみんなでサポートしよう")]),_c('div',{staticClass:"description-wrap__icon"},[_vm._v("Shake")])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"description-wrap",style:([_vm.backgroundColor, {background: _vm.background}]),on:{"click":_vm.startMicrophone}},[_c('h2',{staticClass:"description-wrap__logo"},[_vm._v("BUZZER BEATER")]),_c('div',{staticClass:"description-wrap__description"},[_vm._v("ブザーがなったらインタラクションスタート!スマホを横に降ってブザービターが決まるようにみんなでサポートしよう")]),_c('div',{staticClass:"description-wrap__icon"},[_vm._v("Shake")])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10340,7 +10330,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-7e807994", __vue__options__)
   }
 })()}
-},{"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
+},{"../../module/UserMediaManager":102,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 40, stdin */\n.root {\n  position: fixed;\n  width: 100%;\n  height: 100%; }")
 ;(function(){
 'use strict';
@@ -10376,10 +10366,16 @@ exports.default = {
     description: _description2.default,
     app: _app2.default
   },
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    var _this = this;
+
+    setTimeout(function () {
+      _this.showDescription();
+    }, 2000);
+  },
 
   computed: (0, _extends3.default)({}, (0, _vuex.mapState)(['isShow'])),
-  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['showDescription']))
+  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['showDescription', 'showApp']))
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -10399,7 +10395,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"./app/app.vue":98,"./description/description.vue":99,"./top/top.vue":101,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],101:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 27, stdin */\n.top-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 31, stdin */\n  .top-wrap__main-img {\n    background: url(\"../img/top/main.png\");\n    background-size: cover;\n    width: 100%;\n    height: 100%; }\n  /* line 37, stdin */\n  .top-wrap__logo {\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%;\n    width: 782px;\n    height: 438px; }\n    /* line 45, stdin */\n    .top-wrap__logo img {\n      display: block;\n      width: 100%;\n      height: 100%; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 21, stdin */\n.top-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 25, stdin */\n  .top-wrap__main-img {\n    background: url(\"../img/top/main.png\");\n    background-size: cover;\n    width: 100%;\n    height: 100%; }\n  /* line 31, stdin */\n  .top-wrap__logo {\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%;\n    width: 782px;\n    height: 438px; }\n    /* line 39, stdin */\n    .top-wrap__logo img {\n      display: block;\n      width: 100%;\n      height: 100%; }")
 ;(function(){
 'use strict';
 
@@ -10415,10 +10411,7 @@ exports.default = {
     return {
       background: '#000'
     };
-  },
-
-  computed: {},
-  methods: {}
+  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -10479,9 +10472,11 @@ var Microphone = function (_EventEmitter) {
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (Microphone.__proto__ || (0, _getPrototypeOf2.default)(Microphone)).call(this));
 
+    _this.enableMic = true;
     _this.getByteFrequencyDataAverage;
     _this.elVolume;
     _this.draw;
+    _this.Timer = null;
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     return _this;
   }
@@ -10489,7 +10484,12 @@ var Microphone = function (_EventEmitter) {
   (0, _createClass3.default)(Microphone, [{
     key: 'initAudioContext',
     value: function initAudioContext() {
-      this.ctx = new AudioContext();;
+      var isApple = /iphone|ipod|ipad/i.test(navigator.userAgent);
+      if (isApple) {
+        console.log('isApple', isApple);
+        return;
+      }
+      this.ctx = new AudioContext();
       this.analyser = this.ctx.createAnalyser();
       this.frequencies = new Uint8Array(this.analyser.frequencyBinCount);
       this.getVolume();
@@ -10514,22 +10514,26 @@ var Microphone = function (_EventEmitter) {
       };
 
       this.draw = function () {
+        if (_this2.enableMic == false) {
+          if (_this2.Timer !== null) {
+            return;
+          }
+          _this2.Timer = setTimeout(function () {
+            _this2.enableMic = true;
+            _this2.Timer = null;
+            requestAnimationFrame(_this2.draw);
+            console.log('setTimeout', _this2.getByteFrequencyDataAverage());
+          }, 2000);
+          return;
+        }
         _this2.elVolume = Math.floor(_this2.getByteFrequencyDataAverage());
-        if (_this2.elVolume < 5) {
+        if (_this2.elVolume < 90) {
           _this2.emit('support0');
-        }
-        if (_this2.elVolume > 10) {
+        } else {
           _this2.emit('support1');
+          _this2.enableMic = false;
         }
-        if (_this2.elVolume > 20) {
-          _this2.emit('support2');
-        }
-        if (_this2.elVolume > 30) {
-          _this2.emit('support3');
-        }
-        if (_this2.elVolume > 40) {
-          _this2.emit('support4');
-        }
+        //console.log(this.elVolume);
         requestAnimationFrame(_this2.draw);
       };
       this.draw();
@@ -10579,7 +10583,12 @@ var AccelerationManager = function (_EventEmitter) {
 
   function AccelerationManager() {
     (0, _classCallCheck3.default)(this, AccelerationManager);
-    return (0, _possibleConstructorReturn3.default)(this, (AccelerationManager.__proto__ || (0, _getPrototypeOf2.default)(AccelerationManager)).call(this));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (AccelerationManager.__proto__ || (0, _getPrototypeOf2.default)(AccelerationManager)).call(this));
+
+    _this.enableAcceleration = true;
+    _this.Timer = null;
+    return _this;
   }
 
   (0, _createClass3.default)(AccelerationManager, [{
@@ -10590,33 +10599,37 @@ var AccelerationManager = function (_EventEmitter) {
   }, {
     key: 'devicemotionHandler',
     value: function devicemotionHandler(event) {
+      var _this2 = this;
+
       var x = event.acceleration.x;
       var y = event.acceleration.y;
       var z = event.acceleration.z;
 
-      if (x < 5 || y < 5 || z < 5) {
-        this.emit('Shake0');
+      if (this.enableAcceleration == false) {
+        if (this.Timer !== null) {
+          return;
+        }
+        this.Timer = setTimeout(function () {
+          _this2.enableAcceleration = true;
+          _this2.Timer = null;
+        }, 2000);
+        return;
       }
-      if (x > 5 || y > 5 || z > 5) {
+
+      if (x > 20 || y > 20 || z > 20 || x < -20 || y < -20 || z < -20) {
         this.emit('Shake1');
-      }
-      if (x > 10 || y > 10 || z > 10) {
-        this.emit('Shake2');
-      }
-      if (x > 15 || y > 15 || z > 15) {
-        this.emit('Shake3');
-      }
-      if (x > 20 || y > 20 || z > 20) {
-        this.emit('Shake4');
+        this.enableAcceleration = false;
+      } else {
+        this.emit('Shake0');
       }
     }
   }, {
     key: 'initHandle',
     value: function initHandle() {
-      var _this2 = this;
+      var _this3 = this;
 
       window.addEventListener("devicemotion", function (event) {
-        _this2.devicemotionHandler(event);
+        _this3.devicemotionHandler(event);
       }, false);
     }
   }]);
@@ -10642,38 +10655,23 @@ var _root2 = _interopRequireDefault(_root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-new _vue2.default({
+var isSP = /android|iphone|ipod|ipad/i.test(navigator.userAgent);
+
+if (isSP) {
+  new _vue2.default({
     el: document.getElementById('root'),
     store: _store2.default,
     render: function render(h) {
-        return h(_root2.default);
+      return h(_root2.default);
     }
-});
+  });
+}
 
 },{"./components/root.vue":100,"./store":107,"vue":95}],105:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var changeSampleName = exports.changeSampleName = function changeSampleName(_ref) {
-    var commit = _ref.commit;
-
-    var array = ['hoge', 'moge', 'foo', 'bar'];
-    commit('setSampleName', {
-        name: array[Math.floor(Math.random() * array.length)]
-    });
-};
+"use strict";
 
 },{}],106:[function(require,module,exports){
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var sampleMessage = exports.sampleMessage = function sampleMessage(state) {
-    return "hello, " + state.sampleName + ".";
-};
 
 },{}],107:[function(require,module,exports){
 'use strict';
@@ -10709,45 +10707,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_vuex2.default);
 
 var state = {
-    isShow: 'app',
+    isShow: 'top',
     megaphoneColor: 0
 };
 
 exports.default = new _vuex2.default.Store({
     state: state,
-    mutations: mutations,
-    actions: actions,
-    getters: getters
+    mutations: mutations
 });
 
 },{"./actions":105,"./getters":106,"./mutations":108,"vue":95,"vuex":97}],108:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 var showDescription = exports.showDescription = function showDescription(state) {
-    state.isShow = 'description';
+  state.isShow = 'description';
 };
 
 var showApp = exports.showApp = function showApp(state) {
-    state.isShow = 'app';
+  state.isShow = 'app';
 };
 
 var changeColor0 = exports.changeColor0 = function changeColor0(state) {
-    state.megaphoneColor = 0;
+  state.megaphoneColor = 0;
 };
 var changeColor1 = exports.changeColor1 = function changeColor1(state) {
-    state.megaphoneColor = 1;
-};
-var changeColor2 = exports.changeColor2 = function changeColor2(state) {
-    state.megaphoneColor = 2;
-};
-var changeColor3 = exports.changeColor3 = function changeColor3(state) {
-    state.megaphoneColor = 3;
-};
-var changeColor4 = exports.changeColor4 = function changeColor4(state) {
-    state.megaphoneColor = 4;
+  state.megaphoneColor = 1;
 };
 
 },{}]},{},[104]);

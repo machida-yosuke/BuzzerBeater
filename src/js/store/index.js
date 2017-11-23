@@ -8,13 +8,11 @@ import * as getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-    isShow: 'app',
+    isShow: 'top',
     megaphoneColor:0
 };
 
 export default new Vuex.Store({
     state,
     mutations,
-    actions,
-    getters
 });

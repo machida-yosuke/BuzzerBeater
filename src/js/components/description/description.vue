@@ -1,12 +1,13 @@
 <template lang="pug">
- .description-wrap(v-bind:style='[backgroundColor, {background}]')
+ .description-wrap(v-bind:style='[backgroundColor, {background}]' v-on:click="startMicrophone")
   h2.description-wrap__logo BUZZER BEATER
   .description-wrap__description ブザーがなったらインタラクションスタート!スマホを横に降ってブザービターが決まるようにみんなでサポートしよう
   .description-wrap__icon Shake
 </template>
 
 <script>
- import { mapGetters, mapActions } from 'vuex';
+ import { mapMutations } from 'vuex';
+ import { microphone } from '../../module/UserMediaManager';
  export default {
      name: 'description',
      data(){
@@ -14,11 +15,14 @@
          background:'#e61e2c'
        }
      },
-     computed: {
-
-     },
      methods: {
-
+       ...mapMutations([
+         'showApp'
+       ]),
+       startMicrophone(){
+         this.showApp();
+         microphone.initAudioContext();
+       }
      }
  }
 </script>
