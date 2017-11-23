@@ -2,7 +2,7 @@
 .top-wrap(v-bind:style='[backgroundColor, {background}]')
   .top-wrap__main-img
     h2.top-wrap__logo BUZZER BEATER
-      img(src='../img/top/top_logo.svg')
+      img(src='img/top/top_logo.svg')
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
   width: 100%;
   height: 100%;
   &__main-img{
-    background: url('../img/top/main.png');
+    background: url('img/top/main.png');
     background-size: cover;
     width: 100%;
     height: 100%;

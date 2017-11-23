@@ -10276,11 +10276,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-62b0995e", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-62b0995e", __vue__options__)
+    hotAPI.reload("data-v-62b0995e", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"../../module/accelerationManager":103,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 31, stdin */\n.description-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 35, stdin */\n  .description-wrap__logo {\n    top: 5.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 38.51852%;\n    height: 11.97917%;\n    background: url(\"../img/description/description_logo.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 46, stdin */\n  .description-wrap__description {\n    top: 24.01042%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 82.03704%;\n    height: 26.14583%;\n    background: url(\"../img/description/description.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 57, stdin */\n  .description-wrap__icon {\n    top: 55.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.98148%;\n    height: 35.26042%;\n    background: url(\"../img/description/icon.svg\") no-repeat center;\n    background-size: contain; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 31, stdin */\n.description-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 35, stdin */\n  .description-wrap__logo {\n    top: 5.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 38.51852%;\n    height: 11.97917%;\n    background: url(\"img/description/description_logo.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 46, stdin */\n  .description-wrap__description {\n    top: 24.01042%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 82.03704%;\n    height: 26.14583%;\n    background: url(\"img/description/description.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 57, stdin */\n  .description-wrap__icon {\n    top: 55.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.98148%;\n    height: 35.26042%;\n    background: url(\"img/description/icon.svg\") no-repeat center;\n    background-size: contain; }")
 ;(function(){
 'use strict';
 
@@ -10327,7 +10327,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7e807994", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7e807994", __vue__options__)
+    hotAPI.reload("data-v-7e807994", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
@@ -10391,11 +10391,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-dcc5b772", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-dcc5b772", __vue__options__)
+    hotAPI.reload("data-v-dcc5b772", __vue__options__)
   }
 })()}
 },{"./app/app.vue":98,"./description/description.vue":99,"./top/top.vue":101,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],101:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 21, stdin */\n.top-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 25, stdin */\n  .top-wrap__main-img {\n    background: url(\"../img/top/main.png\");\n    background-size: cover;\n    width: 100%;\n    height: 100%; }\n  /* line 31, stdin */\n  .top-wrap__logo {\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%;\n    width: 782px;\n    height: 438px; }\n    /* line 39, stdin */\n    .top-wrap__logo img {\n      display: block;\n      width: 100%;\n      height: 100%; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 21, stdin */\n.top-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 25, stdin */\n  .top-wrap__main-img {\n    background: url(\"img/top/main.png\");\n    background-size: cover;\n    width: 100%;\n    height: 100%; }\n  /* line 31, stdin */\n  .top-wrap__logo {\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%;\n    width: 782px;\n    height: 438px; }\n    /* line 39, stdin */\n    .top-wrap__logo img {\n      display: block;\n      width: 100%;\n      height: 100%; }")
 ;(function(){
 'use strict';
 
@@ -10418,7 +10418,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"top-wrap",style:([_vm.backgroundColor, {background: _vm.background}])},[_vm._m(0)])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"top-wrap__main-img"},[_c('h2',{staticClass:"top-wrap__logo"},[_vm._v("BUZZER BEATER"),_c('img',{attrs:{"src":"../img/top/top_logo.svg"}})])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"top-wrap__main-img"},[_c('h2',{staticClass:"top-wrap__logo"},[_vm._v("BUZZER BEATER"),_c('img',{attrs:{"src":"img/top/top_logo.svg"}})])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -10427,7 +10427,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-66c1f9c6", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-66c1f9c6", __vue__options__)
+    hotAPI.reload("data-v-66c1f9c6", __vue__options__)
   }
 })()}
 },{"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],102:[function(require,module,exports){

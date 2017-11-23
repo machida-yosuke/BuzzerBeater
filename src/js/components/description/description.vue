@@ -40,7 +40,7 @@
     left: 50%;
     width: 416 / 1080 * 100%;
     height: 230 / 1920 * 100%;
-    background: url('../img/description/description_logo.svg') no-repeat center;
+    background: url('img/description/description_logo.svg') no-repeat center;
     background-size: contain;
   }
   &__description {
@@ -51,7 +51,7 @@
     left: 50%;
     width: 886 / 1080 * 100%;
     height: 502 / 1920 * 100%;
-    background: url('../img/description/description.svg') no-repeat center;
+    background: url('img/description/description.svg') no-repeat center;
     background-size: contain;
   }
   &__icon{
@@ -62,7 +62,7 @@
     left: 50%;
     width: 691 / 1080 * 100%;
     height: 677 / 1920 * 100% ;
-    background: url('../img/description/icon.svg') no-repeat center;
+    background: url('img/description/icon.svg') no-repeat center;
     background-size: contain;
   }
 }
