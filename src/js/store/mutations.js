@@ -11,5 +11,6 @@ export const changeColor0 = (state) => {
   state.megaphoneColor = 0;
 };
 export const changeColor1 = (state) => {
+  console.log('葵に成ります');
   state.megaphoneColor = 1;
 };

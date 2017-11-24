@@ -10213,7 +10213,7 @@ module.exports = index;
 
 }).call(this,require('_process'))
 },{"_process":93}],98:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 54, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 59, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 69, stdin */\n[data-color='0'] {\n  fill: #ff0000; }\n\n/* line 73, stdin */\n[data-color='1'] {\n  fill: #0000ff; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 66, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 71, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 81, stdin */\n[data-color='0'] {\n  fill: #ff0000; }\n\n/* line 85, stdin */\n[data-color='1'] {\n  fill: #0000ff; }")
 ;(function(){
 'use strict';
 
@@ -10238,24 +10238,36 @@ exports.default = {
   mounted: function mounted() {
     var _this = this;
 
+    console.log(_accelerationManager.accelerationManager);
     _accelerationManager.accelerationManager.setAcceleration();
     _accelerationManager.accelerationManager.on('Shake0', function () {
       _this.changeColor0();
     });
+
     _accelerationManager.accelerationManager.on('Shake1', function () {
       _this.changeColor1();
+      _UserMediaManager.microphone.disable();
+      setTimeout(function () {
+        _UserMediaManager.microphone.enable();
+      }, 2000);
     });
 
     _UserMediaManager.microphone.on('support0', function () {
       _this.changeColor0();
     });
+
     _UserMediaManager.microphone.on('support1', function () {
       _this.changeColor1();
+      _accelerationManager.accelerationManager.disable();
+      setTimeout(function () {
+        _accelerationManager.accelerationManager.enable();
+      }, 2000);
     });
   },
   data: function data() {
     return {
-      background: '#000'
+      background: '#000',
+      enableMedia: true
     };
   },
 
@@ -10266,7 +10278,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-wrap",style:([_vm.backgroundColor, {background: _vm.background}])},[_c('div',{staticClass:"app-wrap__megaphone"},[_c('svg',{staticStyle:{"enable-background":"new 0 0 779.6 1380"},attrs:{"version":"1.1","id":"レイヤー_1","xmlns":"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink","x":"0px","y":"0px","viewBox":"0 0 779.6 1380","xml:space":"preserve"}},[_c('g',{attrs:{"data-color":_vm.megaphoneColor}},[_c('path',{staticClass:"st0",attrs:{"d":"M539.2,1181.2c-9.7-27.1-19.4-54.1-29.1-81.1L779.6,198c-0.9,3.1-2,6.1-3.2,9.2c-0.6,1.4-1.2,2.8-1.8,4.2c-0.1,0.1-0.1,0.2-0.2,0.4c-0.6,1.4-1.2,2.7-1.9,4c-0.1,0.2-0.2,0.3-0.2,0.5c-0.7,1.3-1.4,2.7-2.1,4c-0.1,0.1-0.1,0.3-0.2,0.4c-0.7,1.4-1.5,2.7-2.3,4c0,0.1-0.1,0.1-0.1,0.2c-24.2,40.1-73.4,73.7-137.5,97.4c-31.8,11.8-67.2,21.2-105,27.7c-0.7,0.1-1.5,0.3-2.2,0.4c-2.4,0.4-4.8,0.8-7.1,1.2c-1.6,0.2-3.1,0.5-4.7,0.7c-1.5,0.2-3,0.4-4.4,0.7c-2.6,0.4-5.2,0.7-7.8,1.1c-0.1,0-0.2,0-0.3,0c-19.8,2.6-40.1,4.5-60.8,5.6c-0.1,0-0.1,0-0.2,0c-2.8,0.1-5.6,0.3-8.4,0.4c-0.8,0-1.6,0.1-2.4,0.1c-2.1,0.1-4.3,0.2-6.4,0.2c-1.4,0-2.8,0.1-4.2,0.1c-1.6,0-3.2,0.1-4.9,0.1c-1.8,0-3.7,0.1-5.5,0.1c-1.2,0-2.5,0-3.7,0c-2.2,0-4.3,0-6.5,0c-1,0-2,0-3,0c-2.4,0-4.8,0-7.2-0.1c-0.8,0-1.6,0-2.4,0c-2.6,0-5.1-0.1-7.7-0.2c-0.7,0-1.3,0-2-0.1c-2.7-0.1-5.3-0.2-8-0.3c-0.6,0-1.2,0-1.8-0.1c-2.7-0.1-5.5-0.2-8.3-0.4c-0.5,0-1-0.1-1.6-0.1c-2.8-0.2-5.7-0.3-8.5-0.5c-0.4,0-0.9-0.1-1.3-0.1c-2.9-0.2-5.8-0.4-8.8-0.6c-0.3,0-0.7-0.1-1-0.1c-3-0.2-6.1-0.5-9.1-0.8c-0.2,0-0.4,0-0.6-0.1c-3.2-0.3-6.5-0.6-9.7-0.9C145.4,339.2,22.9,271.1,0,191.6c87.1,302.2,174.3,604.3,261.4,906.5l-62.7,169.4c-20.1,50.4,47,99.9,149.8,110.5l0,0c1.7,0.2,3.3,0.3,5,0.5c0.6,0.1,1.1,0.1,1.7,0.1c1.1,0.1,2.1,0.2,3.2,0.3c0.9,0.1,1.9,0.1,2.8,0.2c0.7,0,1.4,0.1,2.1,0.1c1.1,0.1,2.2,0.1,3.3,0.2c0.5,0,1,0.1,1.6,0.1c1.2,0.1,2.4,0.1,3.6,0.2c0.4,0,0.8,0,1.2,0.1c1.3,0.1,2.6,0.1,3.9,0.1c0.3,0,0.6,0,0.9,0c1.4,0,2.8,0.1,4.1,0.1c0.2,0,0.4,0,0.6,0c1.5,0,3,0,4.4,0c0,0,0.1,0,0.1,0c14.2,0,28.1-0.7,41.5-2.1c41.6-4.5,78.7-15.9,105.2-32.1c2.9-1.8,5.7-3.6,8.3-5.5c0.2-0.1,0.4-0.3,0.6-0.4c0.7-0.5,1.3-1,2-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-0.9,1.8-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-1,1.8-1.5c0.2-0.1,0.3-0.3,0.5-0.4c1.2-1,2.3-2.1,3.5-3.1c0.2-0.2,0.4-0.4,0.6-0.6c0.5-0.4,0.9-0.9,1.3-1.3c0.3-0.3,0.6-0.6,0.9-0.9c0.4-0.4,0.8-0.8,1.2-1.3c0.3-0.4,0.7-0.7,1-1.1c0.4-0.4,0.7-0.8,1.1-1.2c0.3-0.4,0.7-0.8,1-1.2c0.3-0.4,0.6-0.8,1-1.2c0.4-0.5,0.8-1,1.2-1.6c0.3-0.4,0.7-0.9,1-1.3c0.4-0.6,0.9-1.2,1.3-1.8c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,1-1.5c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,0.9-1.5c0.2-0.3,0.4-0.7,0.5-1c0.3-0.6,0.6-1.1,0.8-1.7c0.1-0.3,0.3-0.6,0.4-0.9c0.4-0.9,0.8-1.7,1.1-2.6c4.6-11.6,4.6-23.1,0.7-34.1C560.9,1241.7,550,1211.4,539.2,1181.2z"}}),_vm._v(" "),_c('path',{staticClass:"st0",attrs:{"d":"M23,164.7c0-8.6,1.8-17.4,5.3-26.3C61.5,55.3,243.6-18.4,462.1,4.1c184.6,19.1,294.8,99.3,294.8,165.7c0,8.6-1.8,17.4-5.3,26.3c-33.1,83.1-215.3,156.8-433.7,134.3C133.3,311.3,23,231.1,23,164.7L23,164.7z"}})])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-wrap",style:([_vm.backgroundColor, {background: _vm.background}])},[_c('div',{staticClass:"app-wrap__megaphone"},[_c('svg',{staticStyle:{"enable-background":"new 0 0 779.6 1380"},attrs:{"data-color":_vm.megaphoneColor,"version":"1.1","id":"レイヤー_1","xmlns":"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink","x":"0px","y":"0px","viewBox":"0 0 779.6 1380","xml:space":"preserve"}},[_c('g',[_c('path',{staticClass:"st0",attrs:{"d":"M539.2,1181.2c-9.7-27.1-19.4-54.1-29.1-81.1L779.6,198c-0.9,3.1-2,6.1-3.2,9.2c-0.6,1.4-1.2,2.8-1.8,4.2c-0.1,0.1-0.1,0.2-0.2,0.4c-0.6,1.4-1.2,2.7-1.9,4c-0.1,0.2-0.2,0.3-0.2,0.5c-0.7,1.3-1.4,2.7-2.1,4c-0.1,0.1-0.1,0.3-0.2,0.4c-0.7,1.4-1.5,2.7-2.3,4c0,0.1-0.1,0.1-0.1,0.2c-24.2,40.1-73.4,73.7-137.5,97.4c-31.8,11.8-67.2,21.2-105,27.7c-0.7,0.1-1.5,0.3-2.2,0.4c-2.4,0.4-4.8,0.8-7.1,1.2c-1.6,0.2-3.1,0.5-4.7,0.7c-1.5,0.2-3,0.4-4.4,0.7c-2.6,0.4-5.2,0.7-7.8,1.1c-0.1,0-0.2,0-0.3,0c-19.8,2.6-40.1,4.5-60.8,5.6c-0.1,0-0.1,0-0.2,0c-2.8,0.1-5.6,0.3-8.4,0.4c-0.8,0-1.6,0.1-2.4,0.1c-2.1,0.1-4.3,0.2-6.4,0.2c-1.4,0-2.8,0.1-4.2,0.1c-1.6,0-3.2,0.1-4.9,0.1c-1.8,0-3.7,0.1-5.5,0.1c-1.2,0-2.5,0-3.7,0c-2.2,0-4.3,0-6.5,0c-1,0-2,0-3,0c-2.4,0-4.8,0-7.2-0.1c-0.8,0-1.6,0-2.4,0c-2.6,0-5.1-0.1-7.7-0.2c-0.7,0-1.3,0-2-0.1c-2.7-0.1-5.3-0.2-8-0.3c-0.6,0-1.2,0-1.8-0.1c-2.7-0.1-5.5-0.2-8.3-0.4c-0.5,0-1-0.1-1.6-0.1c-2.8-0.2-5.7-0.3-8.5-0.5c-0.4,0-0.9-0.1-1.3-0.1c-2.9-0.2-5.8-0.4-8.8-0.6c-0.3,0-0.7-0.1-1-0.1c-3-0.2-6.1-0.5-9.1-0.8c-0.2,0-0.4,0-0.6-0.1c-3.2-0.3-6.5-0.6-9.7-0.9C145.4,339.2,22.9,271.1,0,191.6c87.1,302.2,174.3,604.3,261.4,906.5l-62.7,169.4c-20.1,50.4,47,99.9,149.8,110.5l0,0c1.7,0.2,3.3,0.3,5,0.5c0.6,0.1,1.1,0.1,1.7,0.1c1.1,0.1,2.1,0.2,3.2,0.3c0.9,0.1,1.9,0.1,2.8,0.2c0.7,0,1.4,0.1,2.1,0.1c1.1,0.1,2.2,0.1,3.3,0.2c0.5,0,1,0.1,1.6,0.1c1.2,0.1,2.4,0.1,3.6,0.2c0.4,0,0.8,0,1.2,0.1c1.3,0.1,2.6,0.1,3.9,0.1c0.3,0,0.6,0,0.9,0c1.4,0,2.8,0.1,4.1,0.1c0.2,0,0.4,0,0.6,0c1.5,0,3,0,4.4,0c0,0,0.1,0,0.1,0c14.2,0,28.1-0.7,41.5-2.1c41.6-4.5,78.7-15.9,105.2-32.1c2.9-1.8,5.7-3.6,8.3-5.5c0.2-0.1,0.4-0.3,0.6-0.4c0.7-0.5,1.3-1,2-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-0.9,1.8-1.4c0.3-0.2,0.5-0.4,0.8-0.6c0.6-0.5,1.2-1,1.8-1.5c0.2-0.1,0.3-0.3,0.5-0.4c1.2-1,2.3-2.1,3.5-3.1c0.2-0.2,0.4-0.4,0.6-0.6c0.5-0.4,0.9-0.9,1.3-1.3c0.3-0.3,0.6-0.6,0.9-0.9c0.4-0.4,0.8-0.8,1.2-1.3c0.3-0.4,0.7-0.7,1-1.1c0.4-0.4,0.7-0.8,1.1-1.2c0.3-0.4,0.7-0.8,1-1.2c0.3-0.4,0.6-0.8,1-1.2c0.4-0.5,0.8-1,1.2-1.6c0.3-0.4,0.7-0.9,1-1.3c0.4-0.6,0.9-1.2,1.3-1.8c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,1-1.5c0.2-0.3,0.4-0.7,0.6-1c0.3-0.5,0.6-1,0.9-1.5c0.2-0.3,0.4-0.7,0.5-1c0.3-0.6,0.6-1.1,0.8-1.7c0.1-0.3,0.3-0.6,0.4-0.9c0.4-0.9,0.8-1.7,1.1-2.6c4.6-11.6,4.6-23.1,0.7-34.1C560.9,1241.7,550,1211.4,539.2,1181.2z"}}),_vm._v(" "),_c('path',{staticClass:"st0",attrs:{"d":"M23,164.7c0-8.6,1.8-17.4,5.3-26.3C61.5,55.3,243.6-18.4,462.1,4.1c184.6,19.1,294.8,99.3,294.8,165.7c0,8.6-1.8,17.4-5.3,26.3c-33.1,83.1-215.3,156.8-433.7,134.3C133.3,311.3,23,231.1,23,164.7L23,164.7z"}})])])])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10276,7 +10288,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-62b0995e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-62b0995e", __vue__options__)
+    hotAPI.rerender("data-v-62b0995e", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"../../module/accelerationManager":103,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
@@ -10327,7 +10339,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7e807994", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7e807994", __vue__options__)
+    hotAPI.rerender("data-v-7e807994", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
@@ -10391,7 +10403,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-dcc5b772", __vue__options__)
   } else {
-    hotAPI.reload("data-v-dcc5b772", __vue__options__)
+    hotAPI.rerender("data-v-dcc5b772", __vue__options__)
   }
 })()}
 },{"./app/app.vue":98,"./description/description.vue":99,"./top/top.vue":101,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],101:[function(require,module,exports){
@@ -10427,7 +10439,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-66c1f9c6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-66c1f9c6", __vue__options__)
+    hotAPI.rerender("data-v-66c1f9c6", __vue__options__)
   }
 })()}
 },{"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],102:[function(require,module,exports){
@@ -10477,18 +10489,32 @@ var Microphone = function (_EventEmitter) {
     _this.elVolume;
     _this.draw;
     _this.Timer = null;
+    _this.animefreame = null;
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     return _this;
   }
 
   (0, _createClass3.default)(Microphone, [{
+    key: 'enable',
+    value: function enable() {
+      this.enableMic = true;
+      console.log(this.enableMic);
+    }
+  }, {
+    key: 'disable',
+    value: function disable() {
+      this.enableMic = false;
+      console.log(this.enableMic);
+    }
+  }, {
     key: 'initAudioContext',
     value: function initAudioContext() {
+      console.log('initAudioContext');
       var isApple = /iphone|ipod|ipad/i.test(navigator.userAgent);
-      if (isApple) {
-        console.log('isApple', isApple);
-        return;
-      }
+      // if (isApple) {
+      //   console.log('isApple',isApple);
+      //   return;
+      // }
       this.ctx = new AudioContext();
       this.analyser = this.ctx.createAnalyser();
       this.frequencies = new Uint8Array(this.analyser.frequencyBinCount);
@@ -10503,6 +10529,7 @@ var Microphone = function (_EventEmitter) {
         window.hackForMozzila = stream;
         _this2.ctx.createMediaStreamSource(stream).connect(_this2.analyser);
       }).catch(function (err) {
+        console.log('getVolumeだめです');
         console.log(err.message);
       });
 
@@ -10518,23 +10545,29 @@ var Microphone = function (_EventEmitter) {
           if (_this2.Timer !== null) {
             return;
           }
+          cancelAnimationFrame(_this2.animefreame);
+          //this.ctx.suspend();
           _this2.Timer = setTimeout(function () {
             _this2.enableMic = true;
             _this2.Timer = null;
-            requestAnimationFrame(_this2.draw);
-            console.log('setTimeout', _this2.getByteFrequencyDataAverage());
+            //this.ctx.resume();
+            _this2.animefreame = requestAnimationFrame(_this2.draw);
           }, 2000);
           return;
         }
+
+        //音量の判定
         _this2.elVolume = Math.floor(_this2.getByteFrequencyDataAverage());
-        if (_this2.elVolume < 90) {
+        if (_this2.elVolume < 20) {
+          console.log('elVolume', _this2.elVolume);
           _this2.emit('support0');
         } else {
           _this2.emit('support1');
+          console.log('this.emit("support1")', _this2.elVolume);
           _this2.enableMic = false;
         }
-        //console.log(this.elVolume);
-        requestAnimationFrame(_this2.draw);
+
+        _this2.animefreame = requestAnimationFrame(_this2.draw);
       };
       this.draw();
     }
@@ -10597,6 +10630,18 @@ var AccelerationManager = function (_EventEmitter) {
       this.initHandle();
     }
   }, {
+    key: 'enable',
+    value: function enable() {
+      this.enableAcceleration = true;
+      console.log(this.enableAcceleration);
+    }
+  }, {
+    key: 'disable',
+    value: function disable() {
+      this.enableAcceleration = false;
+      console.log(this.enableAcceleration);
+    }
+  }, {
     key: 'devicemotionHandler',
     value: function devicemotionHandler(event) {
       var _this2 = this;
@@ -10616,7 +10661,9 @@ var AccelerationManager = function (_EventEmitter) {
         return;
       }
 
-      if (x > 20 || y > 20 || z > 20 || x < -20 || y < -20 || z < -20) {
+      //加速度の判定
+      if (x > 10 || y > 10 || z > 10 || x < -10 || y < -10 || z < -10) {
+        console.log('加速した');
         this.emit('Shake1');
         this.enableAcceleration = false;
       } else {
@@ -10734,6 +10781,7 @@ var changeColor0 = exports.changeColor0 = function changeColor0(state) {
   state.megaphoneColor = 0;
 };
 var changeColor1 = exports.changeColor1 = function changeColor1(state) {
+  console.log('葵に成ります');
   state.megaphoneColor = 1;
 };
 
