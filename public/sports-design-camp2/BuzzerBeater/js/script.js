@@ -10213,7 +10213,7 @@ module.exports = index;
 
 }).call(this,require('_process'))
 },{"_process":93}],98:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 66, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 71, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 81, stdin */\n[data-color='0'] {\n  fill: #ff0000; }\n\n/* line 85, stdin */\n[data-color='1'] {\n  fill: #0000ff; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 66, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 71, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 81, stdin */\n[data-color='0'] {\n  fill: #0000ff; }\n\n/* line 85, stdin */\n[data-color='1'] {\n  fill: #ff0000; }")
 ;(function(){
 'use strict';
 
@@ -10288,7 +10288,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-62b0995e", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-62b0995e", __vue__options__)
+    hotAPI.reload("data-v-62b0995e", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"../../module/accelerationManager":103,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
@@ -10339,7 +10339,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7e807994", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7e807994", __vue__options__)
+    hotAPI.reload("data-v-7e807994", __vue__options__)
   }
 })()}
 },{"../../module/UserMediaManager":102,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
@@ -10403,7 +10403,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-dcc5b772", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-dcc5b772", __vue__options__)
+    hotAPI.reload("data-v-dcc5b772", __vue__options__)
   }
 })()}
 },{"./app/app.vue":98,"./description/description.vue":99,"./top/top.vue":101,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],101:[function(require,module,exports){
@@ -10439,7 +10439,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-66c1f9c6", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-66c1f9c6", __vue__options__)
+    hotAPI.reload("data-v-66c1f9c6", __vue__options__)
   }
 })()}
 },{"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],102:[function(require,module,exports){
@@ -10781,7 +10781,6 @@ var changeColor0 = exports.changeColor0 = function changeColor0(state) {
   state.megaphoneColor = 0;
 };
 var changeColor1 = exports.changeColor1 = function changeColor1(state) {
-  console.log('葵に成ります');
   state.megaphoneColor = 1;
 };
 

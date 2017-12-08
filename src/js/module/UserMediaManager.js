@@ -24,10 +24,9 @@ class Microphone extends EventEmitter{
   initAudioContext(){
     console.log('initAudioContext');
     const isApple = /iphone|ipod|ipad/i.test(navigator.userAgent);
-    // if (isApple) {
-    //   console.log('isApple',isApple);
-    //   return;
-    // }
+    if (isApple) {
+      return;
+    }
     this.ctx = new AudioContext();
     this.analyser = this.ctx.createAnalyser();
     this.frequencies = new Uint8Array(this.analyser.frequencyBinCount);

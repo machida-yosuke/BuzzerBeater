@@ -79,10 +79,10 @@ export default {
   }
 
   [data-color='0']{
-    fill:#ff0000;
+    fill:#0000ff;
   }
 
   [data-color='1']{
-    fill:#0000ff;
+    fill:#ff0000;
   }
 </style>
