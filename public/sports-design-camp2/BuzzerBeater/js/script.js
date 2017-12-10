@@ -10213,7 +10213,7 @@ module.exports = index;
 
 }).call(this,require('_process'))
 },{"_process":93}],98:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 66, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 71, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 81, stdin */\n[data-color='0'] {\n  fill: #0000ff; }\n\n/* line 85, stdin */\n[data-color='1'] {\n  fill: #ff0000; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 56, stdin */\n.app-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 61, stdin */\n  .app-wrap__megaphone {\n    position: absolute;\n    width: 779px;\n    height: 1380px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 70, stdin */\n[data-color='0'] {\n  fill: #bfbfbf; }\n\n/* line 74, stdin */\n[data-color='1'] {\n  fill: #66FF33; }\n\n/* line 78, stdin */\n[data-color='2'] {\n  fill: #0000FF; }")
 ;(function(){
 'use strict';
 
@@ -10229,8 +10229,6 @@ var _vuex = require('vuex');
 
 var _accelerationManager = require('../../module/accelerationManager');
 
-var _UserMediaManager = require('../../module/UserMediaManager');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
@@ -10238,7 +10236,6 @@ exports.default = {
   mounted: function mounted() {
     var _this = this;
 
-    console.log(_accelerationManager.accelerationManager);
     _accelerationManager.accelerationManager.setAcceleration();
     _accelerationManager.accelerationManager.on('Shake0', function () {
       _this.changeColor0();
@@ -10246,33 +10243,22 @@ exports.default = {
 
     _accelerationManager.accelerationManager.on('Shake1', function () {
       _this.changeColor1();
-      _UserMediaManager.microphone.disable();
-      setTimeout(function () {
-        _UserMediaManager.microphone.enable();
-      }, 2000);
+      setTimeout(function () {}, 1000);
     });
 
-    _UserMediaManager.microphone.on('support0', function () {
-      _this.changeColor0();
-    });
-
-    _UserMediaManager.microphone.on('support1', function () {
-      _this.changeColor1();
-      _accelerationManager.accelerationManager.disable();
-      setTimeout(function () {
-        _accelerationManager.accelerationManager.enable();
-      }, 2000);
+    _accelerationManager.accelerationManager.on('Shake2', function () {
+      _this.changeColor2();
+      setTimeout(function () {}, 1000);
     });
   },
   data: function data() {
     return {
-      background: '#000',
-      enableMedia: true
+      background: '#000'
     };
   },
 
   computed: (0, _extends3.default)({}, (0, _vuex.mapState)(['megaphoneColor'])),
-  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['changeColor0', 'changeColor1']))
+  methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['changeColor0', 'changeColor1', 'changeColor2']))
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -10288,11 +10274,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-62b0995e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-62b0995e", __vue__options__)
+    hotAPI.rerender("data-v-62b0995e", __vue__options__)
   }
 })()}
-},{"../../module/UserMediaManager":102,"../../module/accelerationManager":103,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 31, stdin */\n.description-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 35, stdin */\n  .description-wrap__logo {\n    top: 5.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 38.51852%;\n    height: 11.97917%;\n    background: url(\"img/description/description_logo.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 46, stdin */\n  .description-wrap__description {\n    top: 24.01042%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 82.03704%;\n    height: 26.14583%;\n    background: url(\"img/description/description.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 57, stdin */\n  .description-wrap__icon {\n    top: 55.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.98148%;\n    height: 35.26042%;\n    background: url(\"img/description/icon.svg\") no-repeat center;\n    background-size: contain; }")
+},{"../../module/accelerationManager":102,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 29, stdin */\n.description-wrap {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 33, stdin */\n  .description-wrap__logo {\n    top: 5.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 38.51852%;\n    height: 11.97917%;\n    background: url(\"img/description/description_logo.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 44, stdin */\n  .description-wrap__description {\n    top: 24.01042%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 82.03704%;\n    height: 26.14583%;\n    background: url(\"img/description/description.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 55, stdin */\n  .description-wrap__icon {\n    top: 55.20833%;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.98148%;\n    height: 35.26042%;\n    background: url(\"img/description/icon.svg\") no-repeat center;\n    background-size: contain; }")
 ;(function(){
 'use strict';
 
@@ -10305,8 +10291,6 @@ var _extends2 = require('babel-runtime/helpers/extends');
 var _extends3 = _interopRequireDefault(_extends2);
 
 var _vuex = require('vuex');
-
-var _UserMediaManager = require('../../module/UserMediaManager');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10321,7 +10305,6 @@ exports.default = {
   methods: (0, _extends3.default)({}, (0, _vuex.mapMutations)(['showApp']), {
     startMicrophone: function startMicrophone() {
       this.showApp();
-      _UserMediaManager.microphone.initAudioContext();
     }
   })
 };
@@ -10339,10 +10322,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7e807994", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7e807994", __vue__options__)
+    hotAPI.rerender("data-v-7e807994", __vue__options__)
   }
 })()}
-},{"../../module/UserMediaManager":102,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
+},{"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 40, stdin */\n.root {\n  position: fixed;\n  width: 100%;\n  height: 100%; }")
 ;(function(){
 'use strict';
@@ -10403,7 +10386,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-dcc5b772", __vue__options__)
   } else {
-    hotAPI.reload("data-v-dcc5b772", __vue__options__)
+    hotAPI.rerender("data-v-dcc5b772", __vue__options__)
   }
 })()}
 },{"./app/app.vue":98,"./description/description.vue":99,"./top/top.vue":101,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],101:[function(require,module,exports){
@@ -10439,145 +10422,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-66c1f9c6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-66c1f9c6", __vue__options__)
+    hotAPI.rerender("data-v-66c1f9c6", __vue__options__)
   }
 })()}
 },{"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],102:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.microphone = undefined;
-
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
-
-var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _events = require('events');
-
-var _events2 = _interopRequireDefault(_events);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Microphone = function (_EventEmitter) {
-  (0, _inherits3.default)(Microphone, _EventEmitter);
-
-  function Microphone() {
-    (0, _classCallCheck3.default)(this, Microphone);
-
-    var _this = (0, _possibleConstructorReturn3.default)(this, (Microphone.__proto__ || (0, _getPrototypeOf2.default)(Microphone)).call(this));
-
-    _this.enableMic = true;
-    _this.getByteFrequencyDataAverage;
-    _this.elVolume;
-    _this.draw;
-    _this.Timer = null;
-    _this.animefreame = null;
-    window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    return _this;
-  }
-
-  (0, _createClass3.default)(Microphone, [{
-    key: 'enable',
-    value: function enable() {
-      this.enableMic = true;
-      console.log(this.enableMic);
-    }
-  }, {
-    key: 'disable',
-    value: function disable() {
-      this.enableMic = false;
-      console.log(this.enableMic);
-    }
-  }, {
-    key: 'initAudioContext',
-    value: function initAudioContext() {
-      console.log('initAudioContext');
-      var isApple = /iphone|ipod|ipad/i.test(navigator.userAgent);
-      // if (isApple) {
-      //   console.log('isApple',isApple);
-      //   return;
-      // }
-      this.ctx = new AudioContext();
-      this.analyser = this.ctx.createAnalyser();
-      this.frequencies = new Uint8Array(this.analyser.frequencyBinCount);
-      this.getVolume();
-    }
-  }, {
-    key: 'getVolume',
-    value: function getVolume() {
-      var _this2 = this;
-
-      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
-        window.hackForMozzila = stream;
-        _this2.ctx.createMediaStreamSource(stream).connect(_this2.analyser);
-      }).catch(function (err) {
-        console.log('getVolumeだめです');
-        console.log(err.message);
-      });
-
-      this.getByteFrequencyDataAverage = function () {
-        _this2.analyser.getByteFrequencyData(_this2.frequencies);
-        return _this2.frequencies.reduce(function (previous, current) {
-          return previous + current;
-        }) / _this2.analyser.frequencyBinCount;
-      };
-
-      this.draw = function () {
-        if (_this2.enableMic == false) {
-          if (_this2.Timer !== null) {
-            return;
-          }
-          cancelAnimationFrame(_this2.animefreame);
-          //this.ctx.suspend();
-          _this2.Timer = setTimeout(function () {
-            _this2.enableMic = true;
-            _this2.Timer = null;
-            //this.ctx.resume();
-            _this2.animefreame = requestAnimationFrame(_this2.draw);
-          }, 2000);
-          return;
-        }
-
-        //音量の判定
-        _this2.elVolume = Math.floor(_this2.getByteFrequencyDataAverage());
-        if (_this2.elVolume < 20) {
-          console.log('elVolume', _this2.elVolume);
-          _this2.emit('support0');
-        } else {
-          _this2.emit('support1');
-          console.log('this.emit("support1")', _this2.elVolume);
-          _this2.enableMic = false;
-        }
-
-        _this2.animefreame = requestAnimationFrame(_this2.draw);
-      };
-      this.draw();
-    }
-  }]);
-  return Microphone;
-}(_events2.default);
-
-var microphone = exports.microphone = new Microphone();
-
-},{"babel-runtime/core-js/object/get-prototype-of":4,"babel-runtime/helpers/classCallCheck":8,"babel-runtime/helpers/createClass":9,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"events":92}],103:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10633,13 +10481,11 @@ var AccelerationManager = function (_EventEmitter) {
     key: 'enable',
     value: function enable() {
       this.enableAcceleration = true;
-      console.log(this.enableAcceleration);
     }
   }, {
     key: 'disable',
     value: function disable() {
       this.enableAcceleration = false;
-      console.log(this.enableAcceleration);
     }
   }, {
     key: 'devicemotionHandler',
@@ -10657,14 +10503,16 @@ var AccelerationManager = function (_EventEmitter) {
         this.Timer = setTimeout(function () {
           _this2.enableAcceleration = true;
           _this2.Timer = null;
-        }, 2000);
+        }, 1000);
         return;
       }
 
       //加速度の判定
-      if (x > 10 || y > 10 || z > 10 || x < -10 || y < -10 || z < -10) {
-        console.log('加速した');
+      if (z > 20 || z < -20) {
         this.emit('Shake1');
+        this.enableAcceleration = false;
+      } else if (x > 10 || y > 10 || x < -10 || y < -10) {
+        this.emit('Shake2');
         this.enableAcceleration = false;
       } else {
         this.emit('Shake0');
@@ -10685,7 +10533,7 @@ var AccelerationManager = function (_EventEmitter) {
 
 var accelerationManager = exports.accelerationManager = new AccelerationManager();
 
-},{"babel-runtime/core-js/object/get-prototype-of":4,"babel-runtime/helpers/classCallCheck":8,"babel-runtime/helpers/createClass":9,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"events":92}],104:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":4,"babel-runtime/helpers/classCallCheck":8,"babel-runtime/helpers/createClass":9,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"events":92}],103:[function(require,module,exports){
 'use strict';
 
 var _vue = require('vue');
@@ -10714,13 +10562,13 @@ if (isSP) {
   });
 }
 
-},{"./components/root.vue":100,"./store":107,"vue":95}],105:[function(require,module,exports){
+},{"./components/root.vue":100,"./store":106,"vue":95}],104:[function(require,module,exports){
+"use strict";
+
+},{}],105:[function(require,module,exports){
 "use strict";
 
 },{}],106:[function(require,module,exports){
-"use strict";
-
-},{}],107:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10763,7 +10611,7 @@ exports.default = new _vuex2.default.Store({
     mutations: mutations
 });
 
-},{"./actions":105,"./getters":106,"./mutations":108,"vue":95,"vuex":97}],108:[function(require,module,exports){
+},{"./actions":104,"./getters":105,"./mutations":107,"vue":95,"vuex":97}],107:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10784,4 +10632,8 @@ var changeColor1 = exports.changeColor1 = function changeColor1(state) {
   state.megaphoneColor = 1;
 };
 
-},{}]},{},[104]);
+var changeColor2 = exports.changeColor2 = function changeColor2(state) {
+  state.megaphoneColor = 2;
+};
+
+},{}]},{},[103]);

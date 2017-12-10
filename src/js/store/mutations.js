@@ -13,3 +13,7 @@ export const changeColor0 = (state) => {
 export const changeColor1 = (state) => {
   state.megaphoneColor = 1;
 };
+
+export const changeColor2 = (state) => {
+  state.megaphoneColor = 2;
+};

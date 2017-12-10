@@ -12,12 +12,10 @@ class AccelerationManager extends EventEmitter {
 
   enable(){
     this.enableAcceleration = true;
-    console.log(this.enableAcceleration);
   }
 
   disable(){
     this.enableAcceleration = false;
-    console.log(this.enableAcceleration);
   }
 
   devicemotionHandler(event) {
@@ -32,14 +30,16 @@ class AccelerationManager extends EventEmitter {
       this.Timer = setTimeout(()=>{
         this.enableAcceleration = true;
         this.Timer = null;
-      },2000)
+      },1000)
       return ;
     }
 
     //加速度の判定
-    if (x > 10 || y > 10 || z > 10 || x < -10 || y < -10 || z < -10) {
-      console.log('加速した');
+    if (z > 20 || z < -20) {
       this.emit('Shake1');
+      this.enableAcceleration = false;
+    }else if (x > 10 || y > 10 || x < -10 || y < -10) {
+      this.emit('Shake2');
       this.enableAcceleration = false;
     }else {
       this.emit('Shake0');

@@ -12,11 +12,9 @@
 <script>
 import { mapMutations, mapState } from 'vuex';
 import { accelerationManager } from '../../module/accelerationManager';
-import { microphone } from '../../module/UserMediaManager';
 export default {
   name: 'app',
   mounted(){
-    console.log(accelerationManager);
     accelerationManager.setAcceleration();
     accelerationManager.on('Shake0',()=>{
       this.changeColor0();
@@ -24,28 +22,19 @@ export default {
 
     accelerationManager.on('Shake1',()=>{
       this.changeColor1();
-      microphone.disable();
       setTimeout(()=>{
-        microphone.enable();
-      },2000)
+      },1000)
     });
 
-    microphone.on('support0',()=>{
-      this.changeColor0();
-    })
-
-    microphone.on('support1',()=>{
-      this.changeColor1();
-      accelerationManager.disable();
+    accelerationManager.on('Shake2',()=>{
+      this.changeColor2();
       setTimeout(()=>{
-        accelerationManager.enable();
-      },2000)
-    })
+      },1000)
+    });
   },
   data(){
     return{
       background:'#000',
-      enableMedia: true,
     }
   },
   computed: {
@@ -57,6 +46,7 @@ export default {
     ...mapMutations([
       'changeColor0',
       'changeColor1',
+      'changeColor2'
     ])
   }
 }
@@ -77,12 +67,15 @@ export default {
       top: 50%;
     }
   }
-
   [data-color='0']{
-    fill:#0000ff;
+    fill:#bfbfbf;
   }
 
   [data-color='1']{
-    fill:#ff0000;
+    fill:#66FF33;
+  }
+
+  [data-color='2']{
+    fill:#0000FF;
   }
 </style>

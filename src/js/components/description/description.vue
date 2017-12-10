@@ -7,7 +7,6 @@
 
 <script>
  import { mapMutations } from 'vuex';
- import { microphone } from '../../module/UserMediaManager';
  export default {
      name: 'description',
      data(){
@@ -21,7 +20,6 @@
        ]),
        startMicrophone(){
          this.showApp();
-         microphone.initAudioContext();
        }
      }
  }
