@@ -28,7 +28,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('img/partial/description_participate_bg.png') no-repeat center;
+  background: url('img/partial/description_participate_bg.jpg') no-repeat center;
   background-size: cover;
   &__logo{
     top: 50px;

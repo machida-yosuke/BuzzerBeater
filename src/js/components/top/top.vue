@@ -27,7 +27,7 @@ export default {
   width: 100%;
   height: 100%;
   &__main-img{
-    background: url('img/top/top_bg.png');
+    background: url('img/top/top_bg.jpg');
     background-size: cover;
     width: 100%;
     height: 100%;
