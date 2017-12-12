@@ -1,16 +1,20 @@
 <template lang="pug">
- .description(v-on:click="startMicrophone")
+ .description
   h1.description__logo BUZZER BEATER
   h2.description__title What’s ‘BUZZER BEATER’
   .description__description1 試合終了直前に放たれたシュートは、ボールが空中にある間に残り時間が00:00になっても、決まれば得点にカウントされる。
   .description__description2 ビッグサイトにマッピングされたゴールへ放たれるブザービーターに、スマホで参加して、逆転勝利しよう！
-  //next(@click.native='next')
+  nextbtn(@click.native='showParticipate')
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
+import nextbtn from '../partial/nextbtn.vue';
 export default {
   name: 'description',
+  components:{
+    nextbtn
+  },
   methods: {
     ...mapMutations([
       'showParticipate'

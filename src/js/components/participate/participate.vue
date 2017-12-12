@@ -7,13 +7,17 @@
   .participate__participate2
     .participate__participate2-description 2.指示に合わせて、スマホを回そう
     .participate__participate2-image
-  //next(@click.native='next')
+  nextbtn(@click.native='showApp')
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
+import nextbtn from '../partial/nextbtn.vue';
 export default {
   name: 'participate',
+  components:{
+    nextbtn
+  },
   methods: {
     ...mapMutations([
       'showApp'

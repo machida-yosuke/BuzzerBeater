@@ -2,13 +2,17 @@
 .top
   .top__main-img
     h2.top__logo BUZZER BEATER
-  //next(@click.native='next')
+    nextbtn(@click.native='showDescription')
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
+import nextbtn from '../partial/nextbtn.vue';
 export default {
   name: 'top',
+  components:{
+    nextbtn
+  },
   methods:{
     ...mapMutations([
       'showDescription'
