@@ -1,19 +1,23 @@
 
 export const showDescription = (state) => {
-  state.isShow = 'description';
+  state.correntPage = 'description';
+};
+
+export const showParticipate = (state) => {
+  state.correntPage = 'participate';
 };
 
 export const showApp = (state) => {
-  state.isShow = 'app';
+  state.correntPage = 'app';
 };
 
 export const changeColor0 = (state) => {
-  state.megaphoneColor = 0;
+  state.ballColor = 0;
 };
 export const changeColor1 = (state) => {
-  state.megaphoneColor = 1;
+  state.ballColor = 1;
 };
 
 export const changeColor2 = (state) => {
-  state.megaphoneColor = 2;
+  state.ballColor = 2;
 };

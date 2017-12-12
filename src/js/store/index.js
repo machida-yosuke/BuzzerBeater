@@ -8,8 +8,8 @@ import * as getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-    isShow: 'top',
-    megaphoneColor:0
+    correntPage:'app',
+    ballColor:0
 };
 
 export default new Vuex.Store({

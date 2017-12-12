@@ -1,66 +1,73 @@
 <template lang="pug">
- .description-wrap(v-bind:style='[backgroundColor, {background}]' v-on:click="startMicrophone")
-  h2.description-wrap__logo BUZZER BEATER
-  .description-wrap__description ブザーがなったらインタラクションスタート!スマホを横に降ってブザービターが決まるようにみんなでサポートしよう
-  .description-wrap__icon Shake
+ .description(v-on:click="startMicrophone")
+  h1.description__logo BUZZER BEATER
+  h2.description__title What’s ‘BUZZER BEATER’
+  .description__description1 試合終了直前に放たれたシュートは、ボールが空中にある間に残り時間が00:00になっても、決まれば得点にカウントされる。
+  .description__description2 ビッグサイトにマッピングされたゴールへ放たれるブザービーターに、スマホで参加して、逆転勝利しよう！
+  //next(@click.native='next')
 </template>
 
 <script>
- import { mapMutations } from 'vuex';
- export default {
-     name: 'description',
-     data(){
-       return{
-         background:'#e61e2c'
-       }
-     },
-     methods: {
-       ...mapMutations([
-         'showApp'
-       ]),
-       startMicrophone(){
-         this.showApp();
-       }
-     }
- }
+import { mapMutations } from 'vuex';
+export default {
+  name: 'description',
+  methods: {
+    ...mapMutations([
+      'showParticipate'
+    ]),
+  }
+}
 </script>
 
-<style lang="scss">
-.description-wrap{
+<style lang="scss" scoped>
+.description{
   position: absolute;
   width: 100%;
   height: 100%;
+  background: url('img/partial/description_participate_bg.png') no-repeat center;
+  background-size: cover;
   &__logo{
-    top: 100 / 1920 * 100%;
+    top: 50px;
     text-indent: -9999px;
     position: absolute;
     transform: translate(-50%,0);
     left: 50%;
-    width: 416 / 1080 * 100%;
-    height: 230 / 1920 * 100%;
-    background: url('img/description/description_logo.svg') no-repeat center;
+    width: 687px;
+    height:319px;
+    background: url('img/description/description_logo.png') no-repeat center;
+    background-size: cover;
+  }
+  &__title{
+    top: 420px;
+    text-indent: -9999px;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    width: 811px;
+    height:84px;
+    background: url('img/description/whats_bb.png') no-repeat center;
+    background-size: cover;
+  }
+  &__description1 {
+    top: 600px;
+    text-indent: -9999px;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    width: 872px;
+    height: 329px;
+    background: url('img/description/description1.svg') no-repeat center;
     background-size: contain;
   }
-  &__description {
-    top: 461 / 1920 * 100%;
+  &__description2 {
+    top: 1030px;
     text-indent: -9999px;
     position: absolute;
     transform: translate(-50%,0);
     left: 50%;
-    width: 886 / 1080 * 100%;
-    height: 502 / 1920 * 100%;
-    background: url('img/description/description.svg') no-repeat center;
-    background-size: contain;
-  }
-  &__icon{
-    top: 1060 / 1920 * 100%;
-    text-indent: -9999px;
-    position: absolute;
-    transform: translate(-50%,0);
-    left: 50%;
-    width: 691 / 1080 * 100%;
-    height: 677 / 1920 * 100% ;
-    background: url('img/description/icon.svg') no-repeat center;
+    width: 876px;
+    height: 236px;
+    background: url('img/description/description2.svg') no-repeat center;
     background-size: contain;
   }
 }
