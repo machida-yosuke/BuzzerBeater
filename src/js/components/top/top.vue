@@ -1,8 +1,8 @@
 <template lang="pug">
 .top
   .top__main-img
-    h2.top__logo BUZZER BEATER
-    nextbtn(@click.native='showDescription')
+  h2.top__logo BUZZER BEATER
+  nextbtn(@click.native='showDescription')
 </template>
 
 <script>

@@ -17,6 +17,8 @@ import readConfig from 'read-config';
 import watch from 'gulp-watch';
 import RevLogger from 'rev-logger';
 
+import cleancss from 'gulp-clean-css';
+import uglify from 'gulp-uglify';
 
 // const
 const SRC = './src';
@@ -29,6 +31,26 @@ const revLogger = new RevLogger({
     'style.css': `${DEST}/css/style.css`,
     'script.js': `${DEST}/js/script.js`
 });
+
+
+
+//mini
+gulp.task('minify-css',function(){
+  return gulp.src(`${DEST}/css/style.css`)
+    .pipe(cleancss())
+    .pipe(gulp.dest(`${DEST}/css`)
+  );
+});
+
+gulp.task('compress',function(){
+  return gulp.src(`${DEST}/js/*.js`)
+    .pipe(uglify())
+    .pipe(gulp.dest(`${DEST}/js`)
+  );
+});
+
+gulp.task('mini', gulp.parallel('compress', 'minify-css'));
+
 
 
 // css
