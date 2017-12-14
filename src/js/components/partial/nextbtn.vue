@@ -12,18 +12,17 @@ export default {
 <style lang="scss" scoped>
 .next-btn{
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 217px;
+  height: 217px;
   transform: translate(-50%,0);
   left: 50%;
   bottom: 20px;
-  background: red;
   &__image{
-    width: 50px;
-    height: 50px;
+    width: 217px;
+    height: 217px;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    background: url('img/partial/next.png') no-repeat center;
+    background-size: contain;
   }
 }
 </style>

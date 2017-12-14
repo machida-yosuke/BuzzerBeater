@@ -38,7 +38,7 @@ class AccelerationManager extends EventEmitter {
     if (z > 20 || z < -20) {
       this.emit('Shake1');
       this.enableAcceleration = false;
-    }else if (x > 10 || y > 10 || x < -10 || y < -10) {
+    }else if (x > 10 || x < -10) {
       this.emit('Shake2');
       this.enableAcceleration = false;
     }else {

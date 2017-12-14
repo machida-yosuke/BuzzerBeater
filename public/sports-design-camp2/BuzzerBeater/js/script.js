@@ -10213,7 +10213,7 @@ module.exports = index;
 
 }).call(this,require('_process'))
 },{"_process":93}],98:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 62, stdin */\n.app[data-v-62b0995e] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 67, stdin */\n  .app__ball[data-v-62b0995e] {\n    position: absolute;\n    width: 1080px;\n    height: 1237px;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 76, stdin */\n[data-color='0'][data-v-62b0995e] {\n  fill: #bfbfbf; }\n\n/* line 80, stdin */\n[data-color='1'][data-v-62b0995e] {\n  fill: #12ff18; }\n\n/* line 84, stdin */\n[data-color='2'][data-v-62b0995e] {\n  fill: #0000FF; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 62, stdin */\n.app[data-v-62b0995e] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #000; }\n  /* line 67, stdin */\n  .app__ball[data-v-62b0995e] {\n    position: absolute;\n    width: 100%;\n    height: 78.09343%;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%; }\n\n/* line 76, stdin */\n[data-color='0'][data-v-62b0995e] {\n  fill: #bfbfbf; }\n\n/* line 80, stdin */\n[data-color='1'][data-v-62b0995e] {\n  fill: #12ff18; }\n\n/* line 84, stdin */\n[data-color='2'][data-v-62b0995e] {\n  fill: #0000FF; }")
 ;(function(){
 'use strict';
 
@@ -10275,11 +10275,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-62b0995e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-62b0995e", __vue__options__)
+    hotAPI.rerender("data-v-62b0995e", __vue__options__)
   }
 })()}
 },{"../../module/accelerationManager":104,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],99:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 27, stdin */\n.description[data-v-7e807994] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: url(\"img/partial/description_participate_bg.jpg\") no-repeat center;\n  background-size: cover; }\n  /* line 33, stdin */\n  .description__logo[data-v-7e807994] {\n    top: 50px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 687px;\n    height: 319px;\n    background: url(\"img/description/description_logo.png\") no-repeat center;\n    background-size: cover; }\n  /* line 44, stdin */\n  .description__title[data-v-7e807994] {\n    top: 420px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 811px;\n    height: 84px;\n    background: url(\"img/description/whats_bb.png\") no-repeat center;\n    background-size: cover; }\n  /* line 55, stdin */\n  .description__description1[data-v-7e807994] {\n    top: 600px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 872px;\n    height: 329px;\n    background: url(\"img/description/description1.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 66, stdin */\n  .description__description2[data-v-7e807994] {\n    top: 1030px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 876px;\n    height: 236px;\n    background: url(\"img/description/description2.svg\") no-repeat center;\n    background-size: contain; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 27, stdin */\n.description[data-v-7e807994] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: url(\"img/partial/description_participate_bg.jpg\") no-repeat center;\n  background-size: cover; }\n  /* line 33, stdin */\n  .description__logo[data-v-7e807994] {\n    top: 50px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.61111%;\n    height: 20.13889%;\n    background: url(\"img/description/description_logo.png\") no-repeat center;\n    background-size: contain; }\n  /* line 44, stdin */\n  .description__title[data-v-7e807994] {\n    top: 420px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 75.09259%;\n    height: 5.30303%;\n    background: url(\"img/description/whats_bb.png\") no-repeat center;\n    background-size: contain; }\n  /* line 55, stdin */\n  .description__description1[data-v-7e807994] {\n    top: 600px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 80.74074%;\n    height: 20.7702%;\n    background: url(\"img/description/description1.svg\") no-repeat center;\n    background-size: contain; }\n  /* line 66, stdin */\n  .description__description2[data-v-7e807994] {\n    top: 1030px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 81.11111%;\n    height: 14.89899%;\n    background: url(\"img/description/description2.svg\") no-repeat center;\n    background-size: contain; }")
 ;(function(){
 'use strict';
 
@@ -10321,11 +10321,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7e807994", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7e807994", __vue__options__)
+    hotAPI.rerender("data-v-7e807994", __vue__options__)
   }
 })()}
 },{"../partial/nextbtn.vue":100,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],100:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 13, stdin */\n.next-btn[data-v-1457f926] {\n  position: absolute;\n  width: 50px;\n  height: 50px;\n  transform: translate(-50%, 0);\n  left: 50%;\n  bottom: 20px;\n  background: red; }\n  /* line 21, stdin */\n  .next-btn__image[data-v-1457f926] {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    width: 50px;\n    height: 50px; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 13, stdin */\n.next-btn[data-v-1457f926] {\n  position: absolute;\n  width: 217px;\n  height: 217px;\n  transform: translate(-50%, 0);\n  left: 50%;\n  bottom: 20px; }\n  /* line 20, stdin */\n  .next-btn__image[data-v-1457f926] {\n    width: 217px;\n    height: 217px;\n    position: absolute;\n    background: url(\"img/partial/next.png\") no-repeat center;\n    background-size: contain; }")
 ;(function(){
 'use strict';
 
@@ -10350,11 +10350,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1457f926", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1457f926", __vue__options__)
+    hotAPI.rerender("data-v-1457f926", __vue__options__)
   }
 })()}
 },{"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96}],101:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 30, stdin */\n.participate[data-v-39948c58] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: url(\"img/partial/description_participate_bg.jpg\") no-repeat center;\n  background-size: cover; }\n  /* line 36, stdin */\n  .participate__title[data-v-39948c58] {\n    top: 50px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 811px;\n    height: 84px;\n    background: url(\"img/participate/participate_title.png\") no-repeat center;\n    background-size: cover; }\n  /* line 47, stdin */\n  .participate__participate1[data-v-39948c58] {\n    top: 200px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%; }\n    /* line 53, stdin */\n    .participate__participate1-description[data-v-39948c58] {\n      text-indent: -9999px;\n      width: 657px;\n      height: 126px;\n      background: url(\"img/participate/participate1.svg\") no-repeat center;\n      background-size: cover;\n      margin: 0 auto; }\n    /* line 61, stdin */\n    .participate__participate1-image[data-v-39948c58] {\n      width: 611px;\n      height: 396px;\n      background: url(\"img/participate/participate_try.png\") no-repeat center;\n      background-size: cover;\n      margin: 0 auto;\n      margin-top: 40px; }\n  /* line 70, stdin */\n  .participate__participate2[data-v-39948c58] {\n    top: 820px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%; }\n    /* line 76, stdin */\n    .participate__participate2-description[data-v-39948c58] {\n      text-indent: -9999px;\n      width: 511px;\n      height: 123px;\n      background: url(\"img/participate/participate2.svg\") no-repeat center;\n      background-size: cover; }\n    /* line 83, stdin */\n    .participate__participate2-image[data-v-39948c58] {\n      width: 611px;\n      height: 396px;\n      background: url(\"img/participate/participate_goal.png\") no-repeat center;\n      background-size: cover;\n      margin: 0 auto;\n      margin-top: 40px; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 30, stdin */\n.participate[data-v-39948c58] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: url(\"img/partial/description_participate_bg.jpg\") no-repeat center;\n  background-size: cover; }\n  /* line 36, stdin */\n  .participate__title[data-v-39948c58] {\n    top: 50px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 75.09259%;\n    height: 5.30303%;\n    background: url(\"img/participate/participate_title.png\") no-repeat center;\n    background-size: contain; }\n  /* line 47, stdin */\n  .participate__participate1[data-v-39948c58] {\n    top: 200px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.42593%;\n    height: 34.72222%; }\n    /* line 55, stdin */\n    .participate__participate1-description[data-v-39948c58] {\n      text-indent: -9999px;\n      width: 95.91241%;\n      height: 21.35593%;\n      background: url(\"img/participate/participate1.svg\") no-repeat center;\n      background-size: contain;\n      margin: 0 auto; }\n    /* line 63, stdin */\n    .participate__participate1-image[data-v-39948c58] {\n      width: 89.19708%;\n      height: 67.11864%;\n      background: url(\"img/participate/participate_try.png\") no-repeat center;\n      background-size: contain;\n      margin: 0 auto;\n      margin-top: 40px; }\n  /* line 72, stdin */\n  .participate__participate2[data-v-39948c58] {\n    top: 780px;\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, 0);\n    left: 50%;\n    width: 63.42593%;\n    height: 34.72222%; }\n    /* line 80, stdin */\n    .participate__participate2-description[data-v-39948c58] {\n      text-indent: -9999px;\n      width: 74.59854%;\n      height: 20.84746%;\n      background: url(\"img/participate/participate2.svg\") no-repeat center;\n      background-size: contain; }\n    /* line 87, stdin */\n    .participate__participate2-image[data-v-39948c58] {\n      width: 89.19708%;\n      height: 67.11864%;\n      background: url(\"img/participate/participate_goal.png\") no-repeat center;\n      background-size: contain;\n      margin: 0 auto;\n      margin-top: 40px; }")
 ;(function(){
 'use strict';
 
@@ -10396,7 +10396,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-39948c58", __vue__options__)
   } else {
-    hotAPI.reload("data-v-39948c58", __vue__options__)
+    hotAPI.rerender("data-v-39948c58", __vue__options__)
   }
 })()}
 },{"../partial/nextbtn.vue":100,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],102:[function(require,module,exports){
@@ -10461,11 +10461,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-dcc5b772", __vue__options__)
   } else {
-    hotAPI.reload("data-v-dcc5b772", __vue__options__)
+    hotAPI.rerender("data-v-dcc5b772", __vue__options__)
   }
 })()}
 },{"./app/app.vue":98,"./description/description.vue":99,"./participate/participate.vue":101,"./top/top.vue":103,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],103:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 25, stdin */\n.top[data-v-66c1f9c6] {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 29, stdin */\n  .top__main-img[data-v-66c1f9c6] {\n    background: url(\"img/top/top_bg.jpg\");\n    background-size: cover;\n    width: 100%;\n    height: 100%; }\n  /* line 35, stdin */\n  .top__logo[data-v-66c1f9c6] {\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%;\n    width: 1024px;\n    height: 475px;\n    background: url(\"img/top/top_logo.png\"); }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 25, stdin */\n.top[data-v-66c1f9c6] {\n  position: absolute;\n  width: 100%;\n  height: 100%; }\n  /* line 29, stdin */\n  .top__main-img[data-v-66c1f9c6] {\n    background: url(\"img/top/top_bg.jpg\") no-repeat center;\n    background-size: cover;\n    width: 100%;\n    height: 100%; }\n  /* line 35, stdin */\n  .top__logo[data-v-66c1f9c6] {\n    text-indent: -9999px;\n    position: absolute;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    top: 50%;\n    width: 1024px;\n    height: 475px;\n    background: url(\"img/top/top_logo.png\") no-repeat center;\n    background-size: contain; }")
 ;(function(){
 'use strict';
 
@@ -10507,7 +10507,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-66c1f9c6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-66c1f9c6", __vue__options__)
+    hotAPI.rerender("data-v-66c1f9c6", __vue__options__)
   }
 })()}
 },{"../partial/nextbtn.vue":100,"babel-runtime/helpers/extends":10,"vue":95,"vue-hot-reload-api":94,"vueify/lib/insert-css":96,"vuex":97}],104:[function(require,module,exports){
@@ -10596,7 +10596,7 @@ var AccelerationManager = function (_EventEmitter) {
       if (z > 20 || z < -20) {
         this.emit('Shake1');
         this.enableAcceleration = false;
-      } else if (x > 10 || y > 10 || x < -10 || y < -10) {
+      } else if (x > 10 || x < -10) {
         this.emit('Shake2');
         this.enableAcceleration = false;
       } else {

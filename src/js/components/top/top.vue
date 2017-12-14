@@ -27,7 +27,7 @@ export default {
   width: 100%;
   height: 100%;
   &__main-img{
-    background: url('img/top/top_bg.jpg');
+    background: url('img/top/top_bg.jpg') no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -40,7 +40,8 @@ export default {
     top: 50%;
     width: 1024px;
     height: 475px;
-    background: url('img/top/top_logo.png');
+    background: url('img/top/top_logo.png') no-repeat center;
+    background-size: contain;
   }
 }
 </style>

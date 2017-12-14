@@ -36,10 +36,10 @@ export default {
     position: absolute;
     transform: translate(-50%,0);
     left: 50%;
-    width: 687px;
-    height:319px;
+    width: 687 / 1080 * 100%;
+    height:319 / 1584 * 100%;
     background: url('img/description/description_logo.png') no-repeat center;
-    background-size: cover;
+    background-size: contain;
   }
   &__title{
     top: 420px;
@@ -47,10 +47,10 @@ export default {
     position: absolute;
     transform: translate(-50%,0);
     left: 50%;
-    width: 811px;
-    height:84px;
+    width: 811 / 1080 * 100%;
+    height:84 / 1584 * 100%;
     background: url('img/description/whats_bb.png') no-repeat center;
-    background-size: cover;
+    background-size: contain;
   }
   &__description1 {
     top: 600px;
@@ -58,8 +58,8 @@ export default {
     position: absolute;
     transform: translate(-50%,0);
     left: 50%;
-    width: 872px;
-    height: 329px;
+    width: 872 / 1080 * 100%;
+    height: 329 / 1584 * 100%;
     background: url('img/description/description1.svg') no-repeat center;
     background-size: contain;
   }
@@ -69,8 +69,8 @@ export default {
     position: absolute;
     transform: translate(-50%,0);
     left: 50%;
-    width: 876px;
-    height: 236px;
+    width: 876 / 1080 * 100%;
+    height: 236 / 1584 * 100%;
     background: url('img/description/description2.svg') no-repeat center;
     background-size: contain;
   }

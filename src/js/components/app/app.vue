@@ -66,8 +66,8 @@ export default {
   background: #000;
   &__ball{
     position: absolute;
-    width: 1080px;
-    height: 1237px;
+    width: 100%;
+    height: 1237 / 1584 * 100%;
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
